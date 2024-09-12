@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: TTLakes;
+}
+@font-face {
+  font-family: TTLakes;
+  src: url(/fonts/TTLakes-Regular.ttf);
+  font-weight: normal;
+}
+.block-title {  
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.block__title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #7e7e82;  
+  text-transform: uppercase;
+}
+.block-group {
+  padding: 16px 16px 50px 16px;
+  background-color: #f8f8f8;
+}
+
+.block-group__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  padding: 16px;
+}
+.swiper-pagination {
+  transform: translate3d(0, 6px, 0);
+}
+.block-show {
+  padding-top: 24px;
+  text-align: center;
+}
+.block-show__button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b1c21;
+  padding-left: 24px;
+  cursor: pointer;
+}
+.block-show__button::before {
+  content: url(./images/expand.png);
+  position: absolute;
+  left: -6px;
+  top: -2px;
+  transition: transform 0.5s ease-out;
+}
+
+.block-show__button.active::before {
+  transform: rotate(180deg);
+}
+
+.pc {
+  display: none;
+}
+.tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .block-title {
+    padding: 16px 24px;
+  }
+  .swiper-wrapper {
+    display: flex;    
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    overflow: hidden;
+    max-height: 176px;
+    transition: 0.5s ease-out;
+  }
+  .tablet {
+    display: flex;
+  }
+  .block-show {
+    padding-left: 31px;
+}
+.block-group {
+  padding: 24px 24px;
+}
+.block-group__button {
+  margin-right: 0px !important;
+  height: 72px;
+  max-width: 224px;
+}
+
+}
+@media (min-width: 1120px) {
+  .block-title {
+    padding: 16px 32px;
+  }
+  .block-group {
+    padding: 24px 32px;    
+  }
+  .swiper-wrapper {
+    gap: 16px 32px;
+  }
+  .block-show {
+    padding-left: 31px;
+  }
+  .pc {
+    display: flex;
+  }
+  .block-show__button {
+    width: 240px;
+    height: 72px;
+  }
+}  
